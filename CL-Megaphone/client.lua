@@ -45,7 +45,7 @@ RegisterNetEvent("CL-Megaphone:Use", function()
                 header = v.optionname,
                 txt = "Play: "..v.optionname,
                 params = {
-                    event = "CL-BoatShop:PlaySound",
+                    event = "CL-Megaphone:PlaySound",
                     args = {
                         sound = v.sound,
                         optionname = v.optionname,
@@ -79,7 +79,7 @@ AddEventHandler('CL-Megaphone:PlayWithinDistance', function(playerNetId, maxDist
     end
 end)
 
-RegisterNetEvent("CL-BoatShop:PlaySound", function(data)
+RegisterNetEvent("CL-Megaphone:PlaySound", function(data)
     AnimFinished = false
     TriggerEvent("CL-Megaphone:PlayWithinDistance", source, 20.0, data.sound, 10.0)
     SpawnMegaphone()
